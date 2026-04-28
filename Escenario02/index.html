@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep-Space Agency | Inventario</title>
+    <style>
+        /* CSS Vanilla - Estilo Deep-Space */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #0b0d17;
+            --card-bg: #161b22;
+            --accent-oro: #f1c40f;
+            --accent-blue: #4f9cf9;
+            --text-color: #e6edf3;
+            --border-color: #30363d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 3rem 1rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a2e, var(--bg-color));
+            border-bottom: 2px solid var(--accent-oro);
+        }
+
+        header h1 {
+            color: var(--accent-oro);
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-blue);
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 1rem;
+        }
+
+        /* Grid Layout para las galerías */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        article {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-oro);
+        }
+
+        article h3 {
+            color: var(--accent-oro);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        article p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        article strong {
+            color: var(--accent-blue);
+        }
+
+        .tag-habitable {
+            display: inline-block;
+            background: rgba(241, 196, 15, 0.1);
+            color: var(--accent-oro);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        li {
+            font-size: 0.85rem;
+            color: #8b949e;
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #0d1117;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--accent-oro);
+            text-decoration: none;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            main { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DEEP-SPACE AGENCY</h1>
+        <p>Inventario Exoplanetario - Misión de Exploración Dinámica</p>
+    </header>
+
+    <main>
+        <!-- CONSULTA 1: HABITABILIDAD ORO -->
+        <section id="habitabilidad">
+            <h2>Zona de Habitabilidad Oro (10°C - 35°C)</h2>
+            <div class="galeria">
+                <article>
+                    <h3>Gliese Prime</h3>
+                    <p><strong>Temperatura:</strong> 22.5°C</p>
+                    <p><strong>ID:</strong> EP-1024-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Terra Nova</h3>
+                    <p><strong>Temperatura:</strong> 15.0°C</p>
+                    <p><strong>ID:</strong> EP-3001-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Azureus</h3>
+                    <p><strong>Temperatura:</strong> 31.2°C</p>
+                    <p><strong>ID:</strong> EP-6112-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Eden-V</h3>
+                    <p><strong>Temperatura:</strong> 18.4°C</p>
+                    <p><strong>ID:</strong> EP-9090-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Oasis</h3>
+                    <p><strong>Temperatura:</strong> 24.0°C</p>
+                    <p><strong>ID:</strong> EP-3333-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Gaia-2</h3>
+                    <p><strong>Temperatura:</strong> 12.8°C</p>
+                    <p><strong>ID:</strong> EP-7777-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+                <article>
+                    <h3>Hope</h3>
+                    <p><strong>Temperatura:</strong> 20.0°C</p>
+                    <p><strong>ID:</strong> EP-1234-A</p>
+                    <span class="tag-habitable">HABITABLE</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONSULTA 2: RANKING OXÍGENO -->
+        <section id="ranking">
+            <h2>Ranking: Oxígeno y Proximidad (A.L.)</h2>
+            <div class="galeria">
+                <article>
+                    <h3>Gliese Prime</h3>
+                    <p><strong>Distancia:</strong> 4.22 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno</p>
+                </article>
+                <article>
+                    <h3>Eden-V</h3>
+                    <p><strong>Distancia:</strong> 6.20 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno, CO2</p>
+                </article>
+                <article>
+                    <h3>Gaia-2</h3>
+                    <p><strong>Distancia:</strong> 11.05 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno</p>
+                </article>
+                <article>
+                    <h3>Terra Nova</h3>
+                    <p><strong>Distancia:</strong> 12.40 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno, Argón</p>
+                </article>
+                <article>
+                    <h3>Oasis</h3>
+                    <p><strong>Distancia:</strong> 21.12 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno</p>
+                </article>
+                <article>
+                    <h3>Azureus</h3>
+                    <p><strong>Distancia:</strong> 25.33 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno</p>
+                </article>
+                <article>
+                    <h3>Hope</h3>
+                    <p><strong>Distancia:</strong> 30.00 AL</p>
+                    <p><strong>Atmósfera:</strong> Nitrógeno, Oxígeno</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONSULTA 3: FICHAS DE NAVEGACIÓN -->
+        <section id="fichas">
+            <h2>Fichas de Navegación del Sistema</h2>
+            <div class="galeria">
+                <article>
+                    <h3>NAV-DATA: Gliese Prime</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-1024-A</span></li>
+                        <li><span>Composición:</span> <span>2 gases detectados</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>NAV-DATA: Inferno-7</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-2055-B</span></li>
+                        <li><span>Composición:</span> <span>2 gases detectados</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>NAV-DATA: Terra Nova</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-3001-A</span></li>
+                        <li><span>Composición:</span> <span>3 gases detectados</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>NAV-DATA: Frozen Core</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-4412-C</span></li>
+                        <li><span>Composición:</span> <span>1 gas detectado</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>NAV-DATA: Dusty Rock</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-5500-B</span></li>
+                        <li><span>Composición:</span> <span>1 gas detectado</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>NAV-DATA: Azureus</h3>
+                    <ul>
+                        <li><span>Referencia:</span> <span>EP-6112-A</span></li>
+                        <li><span>Composición:</span> <span>2 gases detectados</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototipo Desarrollado por:Javier Oliveros Lepe | <a href="https://github.com/javieroliveros24/Taller-Pr-ctico-02-Pliego-de-condiciones-para-desarrollo-de-MVP002">Ver Repositorio GitHub</a></p>
+        <p>Sede Porvenir - Viapol | UD06: Sistemas de Información Dinámicos</p>
+    </footer>
+
+</body>
+</html>
